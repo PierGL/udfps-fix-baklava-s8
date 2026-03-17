@@ -14,10 +14,10 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
       - name: Build with Gradle
         run: |
-          chmod +x gradlew || true
-          ./gradlew assembleDebug || gradle assembleDebug
+          gradle init --type basic --force
+          gradle assembleDebug
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: UDFPS_Fix_Android16
-          path: "**/*.apk"
+          path: "app/build/outputs/apk/debug/*.apk"
