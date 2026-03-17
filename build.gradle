@@ -1,4 +1,4 @@
-// Lascia questo file completamente vuoto oppure incolla solo questo:
+// Top-level build file
 plugins {
-    id 'com.android.application' version '8.2.2' apply false
+    id 'com.android.application' version '8.7.0' apply false
 }
