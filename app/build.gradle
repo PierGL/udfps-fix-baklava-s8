@@ -1,0 +1,20 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.udfpsinjector'
+    compileSdk 36
+    
+    defaultConfig {
+        applicationId "com.example.udfpsinjector"
+        minSdk 31
+        targetSdk 36
+        versionCode 1
+        versionName "1.0-Baklava"
+    }
+}
+
+dependencies {
+    compileOnly 'ro.v89.xposed:api:82'
+}
