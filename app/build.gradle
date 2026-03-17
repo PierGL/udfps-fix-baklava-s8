@@ -4,22 +4,15 @@ plugins {
 
 android {
     namespace 'com.example.udfpsinjector'
-    compileSdk 36
+    compileSdk 36 // Android 16 Baklava
 
     defaultConfig {
         applicationId "com.example.udfpsinjector"
         minSdk 31
         targetSdk 36
         versionCode 1
-        versionName "1.0"
+        versionName "1.0-Baklava"
     }
-}
-
-repositories {
-    google()
-    mavenCentral()
-    // Aggiungiamo questo per sicurezza
-    maven { url 'https://api.xposed.info/' }
 }
 
 dependencies {
