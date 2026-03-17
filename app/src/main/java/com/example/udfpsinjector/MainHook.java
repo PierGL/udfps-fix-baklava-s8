@@ -11,7 +11,6 @@ public class MainHook implements IXposedHookLoadPackage {
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) throws Throwable {
         if (!lpparam.packageName.equals("android")) return;
 
-        // Hook per le coordinate: X=876, Y=2100
         XposedHelpers.findAndHookMethod(Resources.class, "getIntArray", int.class, new XC_MethodHook() {
             @Override
             protected void afterHookedMethod(MethodHookParam param) throws Throwable {
@@ -23,7 +22,6 @@ public class MainHook implements IXposedHookLoadPackage {
             }
         });
 
-        // Fix Anti-Black Screen (SDK 36 Compliant)
         XposedHelpers.findAndHookMethod(Resources.class, "getBoolean", int.class, new XC_MethodHook() {
             @Override
             protected void afterHookedMethod(MethodHookParam param) throws Throwable {
