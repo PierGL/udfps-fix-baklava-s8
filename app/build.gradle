@@ -1,8 +1,7 @@
 plugins {
-    id 'com.android.application' version '8.7.0' apply false
+    id 'com.android.application'
 }
 
-// Questo serve a forzare il caricamento dei componenti Android 16
 android {
     namespace 'com.example.udfpsinjector'
     compileSdk 36 
@@ -13,6 +12,12 @@ android {
         targetSdk 36
         versionCode 1
         versionName "1.0-Baklava"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
     }
 }
 
